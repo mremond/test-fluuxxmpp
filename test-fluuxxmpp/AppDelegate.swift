@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import XMPP
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        guard let jid = JID("test@localhost/XMPPDemo") else { print("Invalid JID"); return true}
+        var xmppConfig = Config(jid: jid, password: "test", useTLS: false)
+        xmppConfig.allowInsecure = true
+        xmppConfig.host = "mremond-mbp.local"
+        xmppConfig.streamObserver = DefaultStreamObserver()
+
+        let client = XMPP(config: xmppConfig)
+
+        client.connect {
+          print("Disconnected !")
+        }
         return true
     }
 

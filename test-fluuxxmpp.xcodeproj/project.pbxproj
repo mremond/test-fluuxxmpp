@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		021792572320144C00DADF50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 021792562320144C00DADF50 /* Assets.xcassets */; };
 		0217925A2320144C00DADF50 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 021792592320144C00DADF50 /* Preview Assets.xcassets */; };
 		0217925D2320144C00DADF50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0217925B2320144C00DADF50 /* LaunchScreen.storyboard */; };
+		0217926623201D4500DADF50 /* XMPP in Frameworks */ = {isa = PBXBuildFile; productRef = 0217926523201D4500DADF50 /* XMPP */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0217926623201D4500DADF50 /* XMPP in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +93,9 @@
 			dependencies = (
 			);
 			name = "test-fluuxxmpp";
+			packageProductDependencies = (
+				0217926523201D4500DADF50 /* XMPP */,
+			);
 			productName = "test-fluuxxmpp";
 			productReference = 0217924D2320144B00DADF50 /* test-fluuxxmpp.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +124,9 @@
 				Base,
 			);
 			mainGroup = 021792442320144B00DADF50;
+			packageReferences = (
+				0217926423201D4500DADF50 /* XCRemoteSwiftPackageReference "XMPP" */,
+			);
 			productRefGroup = 0217924E2320144B00DADF50 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -342,6 +350,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0217926423201D4500DADF50 /* XCRemoteSwiftPackageReference "XMPP" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FluuxIO/XMPP.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0217926523201D4500DADF50 /* XMPP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0217926423201D4500DADF50 /* XCRemoteSwiftPackageReference "XMPP" */;
+			productName = XMPP;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 021792452320144B00DADF50 /* Project object */;
 }
